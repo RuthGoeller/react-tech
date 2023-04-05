@@ -1,8 +1,7 @@
 import React from "react";
 import Topbar from "./components/topbar/Topbar";
 import Homepage from "./pages/homepage/Homepage";
-import Single from "./pages/single/Single";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 const LAUNCHES_QUERY = `query samplePokeAPIquery {
@@ -39,17 +38,9 @@ function App() {
   
     <Router>
       <Topbar />
-      <Switch>
         <Route exact path="/">
           <Homepage />
         </Route>
-        <Route path="/posts">
-   
-        </Route>
-        <Route path="/post/:id">
-          <Single />
-        </Route>
-      </Switch>
     </Router>
     </div>
   );
